@@ -6,6 +6,7 @@ import LightSwitchButton from './components/LightSwitchButton';
 import TextRepeaterButton from './components/TextRepeaterButton';
 
 function App() {
+  const switchLight = () => setLight((light === "on") ? "off" : "on");
   const [light, setLight] = useState('off');
   const dark = (light === 'off') ? 'dark' : '';
   return (
@@ -14,7 +15,7 @@ function App() {
       <section>
         <AngryButton />
         <CounterButton />
-        <LightSwitchButton light={light} setLight={setLight}/>
+        <LightSwitchButton light={light} setLight={setLight} switchLight = {switchLight}/>
         <TextRepeaterButton/>
       </section>
     </div>
