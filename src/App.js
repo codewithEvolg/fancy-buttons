@@ -6,8 +6,8 @@ import LightSwitchButton from './components/LightSwitchButton';
 import TextRepeaterButton from './components/TextRepeaterButton';
 
 function App() {
-  const switchLight = () => setLight((light === "on") ? "off" : "on");
   const [light, setLight] = useState('off');
+  const switchLight = () => setLight((light === "on") ? "off" : "on");
   const dark = (light === 'off') ? 'dark' : '';
   return (
     <div className={`App ${dark}`}>
